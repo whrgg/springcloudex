@@ -1,0 +1,20 @@
+server:
+  port: 8085
+hm:
+  swagger:
+    title: 商品接口文档
+    package: com.hmall.trade.controller
+  cart:
+    maxSize: 2
+  db:
+    database: hm-trade
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+      http-method-specify: true
+feign:
+  sentinel:
+    enabled: true
+# keytool -genkeypair -alias hmall -keyalg RSA -keypass hmall123 -keystore hmall.jks -storepass hmall123

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: gateway
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: 192.168.217.132:8848
+      config:
+        file-extension: yaml
+        shared-configs:
+          - dataId: log.yaml
+        timeout: 30000
